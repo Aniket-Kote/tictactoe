@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/aklogo.png" type="image/x-icon">
+    <title>Tic Tak Toe</title>
+
+    
+</head>
+<body onload="load_body()">
+
+    <div class="header">
+        
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <div class="players" id="players">
+        <form>
+            <label for="player1">Player 1 Name :</label>
+            <input type="text" id="player_1" autocomplete="off" >
+                <br>
+            <label for="player2">Player 2 Name :</label>
+            <input type="text" id="player_2" autocomplete="off" >
+            <br>
+            <!-- <label for="rounds">Rounds</label>
+            <select name="rounds" id="rounds">
+                <option value="No value" >Select rounds</option>
+            </select>
+                
+            <br> -->
+            <button type="button" onclick='show()'>Start Game</button>
+   <br>
+            <small id="error_msg"></small>
+        </form>
+        
+    </div>
+    <div class="player_name" id="player_name" style="display: none;">        
+            <div>Player 1 : <span id="player_name1"></span> , Player 2 : <span id="player_name2"></span></div>
+            <div>Round Winners:<span id="game_stat" style="visibility:hidden;text-transform: capitalize;"></span></div>
+        </div>
+        
+  <div class="game_mode">
+        
+    <div class="game_board" id="game_board" style="display: none;">
+       
+        
+    
+        <div id="show_chance"></div>
+    
+        <div class="set">
+            <input type="text" id="b1" onclick="fun1(); game_play();" readonly>
+            <input type="text" id="b2" onclick="fun2(); game_play();" readonly>
+            <input type="text" id="b3" onclick="fun3(); game_play();" readonly>
+        </div>
+        <div class="set">
+            <input type="text" id="b4" onclick="fun4(); game_play();" readonly>
+            <input type="text" id="b5" onclick="fun5(); game_play();" readonly>
+            <input type="text" id="b6" onclick="fun6(); game_play();" readonly>
+        </div>
+        
+        <div class="set">
+            <input type="text" id="b7" onclick="fun7(); game_play();" readonly>
+            <input type="text" id="b8" onclick="fun8(); game_play();" readonly>
+            <input type="text" id="b9" onclick="fun9(); game_play();" readonly>
+        </div>
+        <center>
+            <div class="options" id="options">
+                <button class="newgame" id="newgame" onclick="new_game()">New Game</button>
+                <button class="reset" id="reset" onclick="reset()">Reset</button>
+       
+            </div>
+        </center> 
+    </div>
+    
+
+
+    <center>
+        
+    <div class="score_board" id="score_board" style="display: none;">
+        
+        <h4>ScoreBoard</h4><br>
+        <table border="3">
+           
+            <thead>
+                <th>Round</th>
+                <th id="player_name1_head"></th>
+                <th id="player_name2_head"></th>
+            </thead>
+            <tbody id="score">
+
+            </tbody>
+        </table>
+     
+    </div> 
+
+    </center>
+    
+  </div>
+
+<footer>
+    <div>Made for Fun by <b>Askncapture</b></div>
+</footer>
+</body>
+</html>
+
+<script src="js/script.js"></script>
